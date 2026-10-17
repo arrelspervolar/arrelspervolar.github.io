@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arrels per volar</title>
+<meta name="description" content="Arrels per volar: guia didàctica de mirada sistèmica per a l'acció tutorial a Cicle Mitjà.">
+<meta property="og:title" content="Arrels per volar">
+<meta property="og:description" content="Caixa d'eines de pedagogia sistèmica per a l'acció tutorial a Cicle Mitjà: 3 mòduls, 15 fitxes i 3 instruments d'avaluació.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBF5EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='24' r='18' fill='%235E8A68'/%3E%3Crect x='29' y='34' width='6' height='16' fill='%238A6A52'/%3E%3Cpath d='M32 50c-4 3-9 4-14 5M32 50c4 3 9 4 14 5M32 50v8' stroke='%23C9785A' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M44 10q3-4 6 0q3-4 6 0' stroke='%23A65638' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,100&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --ground:#FBF5EC; --paper:#FFFFFF; --ink:#45372E; --muted:#7A6A5E; --line:#EADFD0;
+  --m1:#5E8A68; --m1-soft:#E3EDE3; --m1-t:#4C7556;
+  --m2:#C9785A; --m2-soft:#F7E6DC; --m2-t:#A65638;
+  --m3:#C99A3A; --m3-soft:#F6ECD3; --m3-t:#8C6814;
+  --peach:#EBB79E; --bark:#8A6A52; --earth:#F3E6D6;
+  --red:#C4533F; --yellow:#E0AE2E; --green:#5E8A68;
+  --on-accent:#FFFFFF;
+  --display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --body:"Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  --head:64px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#1E1915; --paper:#28221C; --ink:#F1E8DC; --muted:#B7A898; --line:#3D342B;
+    --m1:#8DBB95; --m1-soft:#25312A; --m1-t:#9FCAA6;
+    --m2:#E3957A; --m2-soft:#3D2A22; --m2-t:#EBA68C;
+    --m3:#E2B65A; --m3-soft:#3A3020; --m3-t:#E8C270;
+    --peach:#9A6650; --bark:#B89478; --earth:#2E261F;
+    --red:#E2735F; --yellow:#E8BF4F; --green:#8DBB95;
+    --on-accent:#1E1915; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1E1915; --paper:#28221C; --ink:#F1E8DC; --muted:#B7A898; --line:#3D342B;
+  --m1:#8DBB95; --m1-soft:#25312A; --m1-t:#9FCAA6;
+  --m2:#E3957A; --m2-soft:#3D2A22; --m2-t:#EBA68C;
+  --m3:#E2B65A; --m3-soft:#3A3020; --m3-t:#E8C270;
+  --peach:#9A6650; --bark:#B89478; --earth:#2E261F;
+  --red:#E2735F; --yellow:#E8BF4F; --green:#8DBB95;
+  --on-accent:#1E1915; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--m3);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:600;line-height:1.12;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem)}
+h3{font-size:1.28rem}
+h4{font-size:1.06rem}
+p{margin:0}
+ul,ol{margin:0}
+.label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:clamp(16px,5vw,48px)}
+.view{padding-bottom:72px}
+.view > section{padding-block:clamp(40px,6vw,64px)}
+.view > section + section{border-top:1px solid var(--line)}
+.shead{display:grid;gap:10px;margin-bottom:28px}
+.lede{font-size:1.1rem;color:var(--muted);max-width:62ch}
+.muted{color:var(--muted)}
+
+/* ---------- Top bar ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--ground) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:var(--head)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.88rem;color:var(--m1-t);white-space:nowrap}
+.brand svg{width:38px;height:38px;flex:none}
+.nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.nav > a,.nav .dd > button{font:600 .95rem var(--body);color:var(--ink);text-decoration:none;padding:8px 12px;border-radius:999px;border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.nav > a:hover,.nav .dd > button:hover{background:var(--earth)}
+.nav .on{background:var(--cs,var(--m1-soft));color:var(--ct,var(--m1-t))!important;font-weight:700}
+.dd-cur{font-size:.8rem;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--c,var(--m1));color:#fff}
+.dd{position:relative}
+.dd > button svg{width:12px;height:12px;transition:transform .15s}
+.dd.open > button svg{transform:rotate(180deg)}
+.dd-menu{display:none;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);width:340px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 14px 40px rgba(60,40,20,.14)}
+.dd.open .dd-menu{display:grid}
+.dd-menu a{display:grid;grid-template-columns:14px 1fr;gap:12px;align-items:start;padding:10px 12px;border-radius:10px;text-decoration:none}
+.dd-menu a:hover{background:var(--ground)}
+.dd-menu a.on{background:var(--cs);box-shadow:inset 4px 0 0 var(--c)}
+.dd-menu a.on b{color:var(--ct)}
+.dd-menu a.on small::after{content:" · Ets aquí";font-weight:700;color:var(--ct)}
+.dd-menu i{width:12px;height:12px;border-radius:4px;margin-top:5px}
+.dd-menu b{display:block;font-size:.95rem}
+.dd-menu small{color:var(--muted);font-size:.83rem}
+.dd-menu hr{border:0;border-top:1px solid var(--line);margin:6px 4px}
+.pill{display:inline-flex;align-items:center;gap:7px;font:700 .88rem var(--body);background:var(--m2-t);color:var(--on-accent);padding:8px 16px;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 3px 10px rgba(166,86,56,.25)}
+.pill:hover{filter:brightness(1.08)}
+.pill svg{width:16px;height:16px}
+.nav .nav-pdf{display:none}
+.menuBtn{display:none;margin-left:auto;font:700 .9rem var(--body);padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+@media (max-width:900px){
+  .menuBtn{display:inline-flex}
+  .top .pill{display:none}
+  .nav .nav-pdf{display:flex;margin-top:8px;justify-content:center}
+  .nav > a.pill,.nav > a.pill:hover{background:var(--m2-t);color:var(--on-accent);padding:12px}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 16px 16px;max-height:calc(100vh - var(--head));overflow-y:auto}
+  .nav.open{display:flex}
+  .nav > a,.nav .dd > button{width:100%;justify-content:space-between;padding:12px}
+  .dd-menu{position:static;transform:none;width:auto;box-shadow:none;border:0;padding:0 0 0 8px}
+  .dd .dd-menu{display:grid}
+  .dd > button svg{display:none}
+}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 .97rem var(--body);padding:11px 18px;border-radius:999px;border:2px solid var(--m1);background:var(--m1);color:var(--on-accent);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:6px 12px;font-size:.85rem;border-width:1.5px}
+.btn svg{width:16px;height:16px}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- Home ---------- */
+.hero{padding-block:clamp(36px,6vw,64px) clamp(28px,4vw,40px)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:center}
+.hero .copy{display:grid;gap:18px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.2rem);letter-spacing:-.01em}
+.hero h1 span{color:var(--m2-t)}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:46ch}
+.logo-img{display:block;width:100%;max-width:460px;height:auto;aspect-ratio:1052/895;object-fit:cover;object-position:top;justify-self:center;mix-blend-mode:multiply}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .logo-img{mix-blend-mode:normal;border-radius:24px} }
+:root[data-theme="dark"] .logo-img{mix-blend-mode:normal;border-radius:24px}
+@media (max-width:760px){ .hero .wrap{grid-template-columns:1fr} .logo-img{max-width:340px} }
+
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.ideas div{padding:22px 24px 4px 0;display:grid;gap:8px;align-content:start}
+.ideas div + div{padding-left:24px;border-left:1px solid var(--line)}
+.ideas p{color:var(--muted)}
+@media (max-width:760px){ .ideas{grid-template-columns:1fr} .ideas div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)} .ideas div{padding-bottom:18px} }
+
+.who{display:flex;flex-wrap:wrap;gap:10px}
+.who span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:.93rem}
+
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mod-card{display:grid;gap:8px;padding:20px;border-radius:16px;background:var(--paper);border:1px solid var(--line);border-top:6px solid var(--mc);text-decoration:none;align-content:start}
+.mod-card:hover{box-shadow:0 8px 24px rgba(60,40,20,.08)}
+.mod-card .k{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mt)}
+.mod-card p{color:var(--muted);font-size:.94rem}
+.mod-card .go{font-weight:700;font-size:.9rem;color:var(--mt)}
+@media (max-width:760px){ .mods{grid-template-columns:1fr} }
+
+.blocks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.blocks a{display:grid;gap:4px;padding:16px;border-radius:14px;border:1px dashed var(--line);text-decoration:none;font-size:.9rem;color:var(--muted);align-content:start}
+.blocks a:hover{border-style:solid;background:var(--paper)}
+.blocks b{color:var(--ink);font-size:.98rem}
+@media (max-width:860px){ .blocks{grid-template-columns:1fr 1fr} }
+@media (max-width:480px){ .blocks{grid-template-columns:1fr} }
+
+.start{list-style:none;padding:0;display:grid;border-top:1px solid var(--line)}
+.start li a{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.start li a:hover .to{text-decoration:underline}
+.start .to{font-weight:700;color:var(--m2-t);white-space:nowrap;font-size:.92rem}
+
+/* ---------- Generic pieces ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){ .two,.three{grid-template-columns:1fr} }
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start}
+.panel ul{padding-left:1.1em;display:grid;gap:6px;color:var(--muted);font-size:.95rem}
+.panel p{color:var(--muted);font-size:.95rem}
+.panel .label{color:var(--m2-t)}
+.sub-h{margin:32px 0 14px}
+.fitxa0{display:grid;gap:4px;margin-bottom:22px}
+.fitxa0 .num{font-weight:700;color:var(--m2-t);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.chips a{font:600 .88rem var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);text-decoration:none}
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+.compare > div{padding:18px 20px;display:grid;gap:8px;align-content:start}
+.compare > div + div{border-left:1px solid var(--line);background:var(--m1-soft)}
+.compare ul{padding-left:1.1em;display:grid;gap:5px;font-size:.95rem}
+@media (max-width:640px){ .compare{grid-template-columns:1fr} .compare > div + div{border-left:0;border-top:1px solid var(--line)} }
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:.94rem;min-width:540px}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--earth)}
+td:first-child{font-weight:700;width:32%}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 9px;border-radius:999px;margin:0 4px 4px 0}
+.t1{background:var(--m1-soft);color:var(--m1-t)}
+.t2{background:var(--m2-soft);color:var(--m2-t)}
+.t3{background:var(--m3-soft);color:var(--m3-t)}
+.quotes{display:grid;gap:10px;margin-bottom:26px}
+.quotes blockquote{margin:0;padding:12px 16px;background:var(--paper);border:1px solid var(--line);border-radius:12px;font-size:.93rem;color:var(--muted)}
+.quotes blockquote b{color:var(--ink);display:block;margin-bottom:2px}
+.rows{display:grid;border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.rows b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-weight:600;font-size:1.08rem}
+.rows p{color:var(--muted)}
+@media (max-width:640px){ .rows div{grid-template-columns:1fr;gap:4px} }
+.systems{display:grid;grid-template-columns:220px 1fr;gap:26px;align-items:center}
+.systems svg{width:100%;max-width:220px}
+.levels{list-style:none;padding:0;display:grid;gap:12px}
+.levels li{display:grid;grid-template-columns:14px 1fr;gap:12px}
+.levels .dot{width:14px;height:14px;border-radius:50%;margin-top:5px}
+.levels p{color:var(--muted);font-size:.94rem}
+@media (max-width:640px){ .systems{grid-template-columns:1fr} .systems svg{justify-self:center;max-width:200px} }
+.refs{columns:2;column-gap:36px;padding-left:1.1em;color:var(--muted);font-size:.92rem}
+.refs li{break-inside:avoid;margin-bottom:5px}
+@media (max-width:640px){ .refs{columns:1} }
+
+/* ---------- Module view ---------- */
+.mhead{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;padding:24px;border-radius:20px;background:var(--ms)}
+.mhead .n{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:3.6rem;font-weight:600;line-height:.85;color:var(--mt)}
+.mhead .k{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mt)}
+.mhead p{color:var(--ink);max-width:62ch;margin-top:8px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;color:var(--muted);margin:18px 0 6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend svg{width:18px;height:18px;color:var(--ink)}
+.fitxes{list-style:none;padding:0;display:grid;gap:12px;margin-top:14px}
+.fx{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--mc);border-radius:14px;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:6px 20px}
+.fx.flash{animation:flash 1.6s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px var(--mc)}100%{box-shadow:0 0 0 0 transparent}}
+.fx .no{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--m2-t)}
+.fx h3{font-size:1.18rem}
+.fx .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.86rem;color:var(--muted);align-items:center}
+.fx .meta b{color:var(--m1-t)}
+.fx .meta .wt{display:inline-flex;align-items:center;gap:5px}
+.fx .meta svg{width:18px;height:18px;color:var(--ink)}
+.fx .sit{font-style:italic;color:var(--ink)}
+.fx .need{font-size:.9rem;color:var(--muted);padding-top:8px;border-top:1px dashed var(--line);margin-top:4px}
+.fx .need b{color:var(--ink)}
+.fx .main{grid-column:1;display:grid;gap:6px}
+.fx .side{grid-column:2;align-self:start}
+.fx .videos{font-size:.86rem;color:var(--muted)}
+.fx .videos b{color:var(--ink)}
+.fx .videos ul{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:3px}
+.fx .videos a{font-weight:700;color:var(--m2-t)}
+@media (max-width:600px){ .fx{grid-template-columns:1fr} .fx .side{grid-column:1} }
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+/* ---------- Map view ---------- */
+.map{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.map-col{display:grid;gap:10px}
+.map-col > a.hd{display:grid;text-align:center;padding:10px;border-radius:14px;background:var(--mc);color:#fff;text-decoration:none}
+.map-col .hd b{font-size:1.02rem}
+.map-col .hd small{font-style:italic;opacity:.92}
+.mc{display:grid;gap:3px;padding:12px 14px;border-radius:12px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--mc);text-decoration:none;font-size:.88rem}
+.mc:hover{box-shadow:0 6px 18px rgba(60,40,20,.08)}
+.mc .no{font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--m2-t)}
+.mc b{font-size:.98rem;line-height:1.25}
+.mc .d{color:var(--muted);font-size:.8rem}
+.mc .d em{font-style:normal;font-weight:700;color:var(--m1-t)}
+.mc i{color:var(--muted)}
+@media (max-width:860px){ .map{grid-template-columns:1fr} }
+.search{display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.search input{flex:1;font:400 1rem var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px}
+.search input:focus{outline:none;border-color:var(--m1)}
+.needs{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+.needs .g{padding:10px 16px;background:var(--earth);font-weight:700;font-size:.9rem;color:var(--m1-t)}
+.needs .r{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 16px;border-top:1px solid var(--line);font-size:.93rem}
+.needs .r a{font-weight:700;color:var(--m2-t);text-decoration:none}
+.needs .r a:hover{text-decoration:underline}
+.needs .r p{color:var(--muted)}
+.needs .none{padding:16px;color:var(--muted)}
+@media (max-width:560px){ .needs .r{grid-template-columns:1fr;gap:2px} }
+.note{margin-top:14px;padding:14px 18px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-style:italic;color:var(--muted);text-align:center}
+
+/* ---------- Evaluation ---------- */
+.dims{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.dims span{padding:6px 14px;border-radius:999px;border:1.5px solid var(--m1);color:var(--m1-t);font-weight:700;font-size:.88rem}
+.tool{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:10px;align-content:start}
+.tool .gaze{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--m1-t)}
+.tool dl{margin:0;display:grid;gap:6px;font-size:.92rem}
+.tool dt{font-weight:700}
+.tool dd{margin:0;color:var(--muted)}
+.lights{display:inline-flex;gap:5px;vertical-align:middle;margin-right:6px}
+.lights i{width:14px;height:14px;border-radius:50%;display:block}
+.callout{margin-top:20px;padding:16px 18px;border-radius:0 14px 14px 0;border-left:4px solid var(--m3);background:var(--m3-soft);font-size:.95rem}
+
+/* ---------- Downloads ---------- */
+.dl{list-style:none;padding:0;display:grid;border-top:1px solid var(--line)}
+.dl li{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.dl .t{font-weight:700}
+.dl .t small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.dl-group{margin-top:26px}
+.dl-group h3{margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.dl-group h3 i{width:12px;height:12px;border-radius:4px;background:var(--mc)}
+
+/* ---------- Home: recurs professional ---------- */
+.spec{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}
+.spec div{padding:14px 16px;display:grid;gap:4px;align-content:start;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec div:nth-child(4n){border-right:0}
+.spec div:nth-last-child(-n+4){border-bottom:0}
+.spec p{font-size:.92rem;line-height:1.45}
+@media (max-width:860px){ .spec{grid-template-columns:1fr 1fr} .spec div:nth-child(4n){border-right:1px solid var(--line)} .spec div:nth-child(2n){border-right:0} .spec div:nth-last-child(-n+4){border-bottom:1px solid var(--line)} .spec div:nth-last-child(-n+2){border-bottom:0} }
+.counts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.counts a{display:grid;gap:2px;padding:16px 18px;border-radius:14px;background:var(--paper);border:1px solid var(--line);text-decoration:none;align-content:start}
+.counts a:hover{box-shadow:0 6px 18px rgba(60,40,20,.08)}
+.counts b{font-family:var(--display);font-variation-settings:"SOFT" 100;font-size:2.2rem;line-height:1;color:var(--m2-t)}
+.counts span{font-weight:700}
+.counts small{color:var(--muted);font-size:.85rem}
+@media (max-width:760px){ .counts{grid-template-columns:1fr 1fr} }
+.anat{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:start}
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:grid;gap:12px;box-shadow:0 10px 30px rgba(60,40,20,.06)}
+.sheet .pg{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--m2-t)}
+.sheet ul{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.sheet li{display:grid;grid-template-columns:44px 1fr;column-gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
+.sheet li i{grid-row:span 2;font-style:normal;font-weight:700;font-size:.8rem;color:var(--m1-t);background:var(--m1-soft);border-radius:8px;display:grid;place-items:center;height:30px}
+.sheet li b{font-size:.95rem}
+.sheet li span{color:var(--muted);font-size:.88rem}
+.sheet.kid{background:var(--m3-soft);box-shadow:none}
+.sheet .btn{justify-self:start}
+@media (max-width:760px){ .anat{grid-template-columns:1fr} }
+.steps4{list-style:none;counter-reset:st;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.steps4 li{counter-increment:st;display:grid;gap:6px;align-content:start;padding:18px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.steps4 li::before{content:counter(st);font-family:var(--display);font-size:1.6rem;font-weight:600;color:var(--m1-t);line-height:1}
+.steps4 p{color:var(--muted);font-size:.93rem}
+@media (max-width:860px){ .steps4{grid-template-columns:1fr 1fr} }
+@media (max-width:480px){ .steps4{grid-template-columns:1fr} .counts{grid-template-columns:1fr} }
+.fx dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.88rem}
+.fx dt{font-weight:700;color:var(--muted);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.fx dd{margin:0}
+.fx .incl{font-size:.8rem;color:var(--muted)}
+
+.reads{list-style:none;padding:0!important;display:grid;gap:12px!important}
+.reads li{display:grid;gap:2px}
+.reads a,.reads b{font-weight:700;color:var(--m2-t)}
+.reads b{color:var(--ink)}
+.reads span{color:var(--muted);font-size:.88rem;line-height:1.45}
+.panel.exp{text-decoration:none;transition:box-shadow .15s}
+.panel.exp:hover{box-shadow:0 8px 24px rgba(60,40,20,.08)}
+.panel.exp h3{color:var(--m2-t)}
+.panel.exp .url{font-size:.82rem;color:var(--m1-t);font-weight:700}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{text-decoration:none;font-weight:700;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ind" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5" fill="currentColor"/><path d="M5 21c0-4 3.1-7 7-7s7 3 7 7" fill="currentColor"/></symbol>
+  <symbol id="i-par" viewBox="0 0 24 24"><circle cx="7.5" cy="8" r="3" fill="currentColor"/><circle cx="16.5" cy="8" r="3" fill="currentColor"/><path d="M1.5 21c0-3.6 2.7-6.2 6-6.2s6 2.6 6 6.2zM10.5 21c0-3.6 2.7-6.2 6-6.2s6 2.6 6 6.2z" fill="currentColor"/></symbol>
+  <symbol id="i-grp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2.4"/><circle cx="12" cy="3.5" r="2.4" fill="currentColor"/><circle cx="20.1" cy="9.4" r="2.4" fill="currentColor"/><circle cx="17" cy="19" r="2.4" fill="currentColor"/><circle cx="7" cy="19" r="2.4" fill="currentColor"/><circle cx="3.9" cy="9.4" r="2.4" fill="currentColor"/></symbol>
+  <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <filter id="handmade" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <symbol id="i-logo" viewBox="0 0 64 64">
+    <g filter="url(#handmade)">
+      <!-- copa, en dues capes com una aquarel·la -->
+      <path d="M11 33c-5-7 0-16 8-16 1-7 11-10 16-5 7-3 15 2 14 10 5 4 3 12-4 13-2 5-11 7-16 3-6 3-15 1-18-5z" fill="var(--m1)" opacity=".55"/>
+      <path d="M14 31c-3-6 2-12 8-11 2-5 9-7 13-3 6-2 11 3 10 8 4 3 1 9-4 9-3 4-9 4-12 1-5 2-13 1-15-4z" fill="var(--m1)" opacity=".75"/>
+      <!-- tronc i branca -->
+      <path d="M29 37c1 6 1 12-1 17h6c-2-5-2-11-1-17z" fill="var(--bark)"/>
+      <path d="M31 41c-3-2-5-4-7-7" stroke="var(--bark)" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <!-- terra i arrels -->
+      <path d="M8 55c8-1.5 40-1.5 48 0" stroke="var(--m3)" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M30 55c-3 2-7 3-11 3.5M33 55c3 2 7 3 11 3M31.5 55c0 2.5-.5 4.5 0 6.5" stroke="var(--m2)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <!-- el vol: traç que surt de la copa -->
+      <path d="M37 20c3-2.5 6-4.5 9-5" stroke="var(--m3)" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="1.5 2.6" fill="none"/>
+      <!-- l'ocell -->
+      <path d="M42.5 14C45.5 8.2 50 6.6 53.6 11.6C50.4 9.8 46.8 10.6 42.5 14Z" fill="var(--m2-t)"/><path d="M53.4 11.6C55.4 5.6 59.4 3 63.5 3.6C59.6 5.2 57.2 8.2 55.8 12.4Z" fill="var(--m2-t)"/><ellipse cx="54.4" cy="12.2" rx="2.4" ry="1.5" fill="var(--m2-t)"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inici"><svg aria-hidden="true"><use href="#i-logo"/></svg>Arrels per volar</a>
+    <button class="menuBtn" id="menuBtn" aria-controls="nav" aria-expanded="false">Menú</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inici" data-nav="inici">Inici</a>
+      <a href="#fonaments" data-nav="fonaments">Fonaments</a>
+      <div class="dd" id="dd">
+        <button type="button" id="ddBtn" aria-expanded="false" aria-controls="ddMenu" data-nav="moduls">Mòduls <span class="dd-cur" id="ddCur" hidden></span><svg><use href="#i-down"/></svg></button>
+        <div class="dd-menu" id="ddMenu">
+          <a href="#mapa" style="--c:var(--peach);--cs:var(--earth);--ct:var(--m2-t)"><i style="background:var(--peach)"></i><span><b>Mapa d'activitats</b><small>Les 15 fitxes d'un cop d'ull i cerca per necessitat</small></span></a>
+          <hr>
+          <a href="#modul-1" style="--c:var(--m1);--cs:var(--m1-soft);--ct:var(--m1-t)"><i style="background:var(--m1)"></i><span><b>Mòdul I · El fil invisible de la meva història</b><small>Identitat i origen</small></span></a>
+          <a href="#modul-2" style="--c:var(--m2);--cs:var(--m2-soft);--ct:var(--m2-t)"><i style="background:var(--m2)"></i><span><b>Mòdul II · Som una Tribu</b><small>Grup i convivència</small></span></a>
+          <a href="#modul-3" style="--c:var(--m3);--cs:var(--m3-soft);--ct:var(--m3-t)"><i style="background:var(--m3)"></i><span><b>Mòdul III · Abraçar l'error</b><small>Error i avaluació</small></span></a>
+        </div>
+      </div>
+      <a href="#avaluacio" data-nav="avaluacio">Avaluació</a>
+      <a href="#orientacions" data-nav="orientacions">Orientacions</a>
+      <a class="pill nav-pdf" href="#materials"><svg><use href="#i-pdf"/></svg>Fitxes descarregables PDF</a>
+    </nav>
+    <a class="pill" href="#materials"><svg><use href="#i-pdf"/></svg>Fitxes descarregables PDF</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- =========================== INICI =========================== -->
+<div class="view" data-view="inici">
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <span class="label">Recurs per a tutors, mestres i equips d'orientació · Cicle Mitjà</span>
+        <h1>Arrels <span>per volar</span></h1>
+        <p class="sub">Una caixa d'eines pràctica, transferible i modular. Dissenyada per a l'enfortiment de la identitat, el sentit de pertinença i el benestar emocional dels infants.</p>
+        <div class="actions">
+          <a class="btn" href="#mapa">Veure les activitats</a>
+          <a class="btn ghost" href="#com-comencar">Com començar</a>
+        </div>
+      </div>
+
+      <img class="logo-img" src="img/logo-arrels-per-volar.jpg" width="1052" height="1008" alt="Il·lustració d'Arrels per volar: un arbre amb arrels que es connecten com una xarxa de vincles i ocells blancs que surten volant de la copa, dins d'un cercle.">
+    </div>
+  </section>
+
+  <section id="fitxa-tecnica" style="padding-top:8px">
+    <div class="wrap">
+      <div class="spec" aria-label="Fitxa tècnica del recurs">
+        <div><span class="label">Per a</span><p>Tutors i tutores, mestres i equips d'orientació (EAP)</p></div>
+        <div><span class="label">Alumnat</span><p>Cicle Mitjà · 3r i 4t (8–10 anys), adaptable a Inicial i Superior</p></div>
+        <div><span class="label">On encaixa</span><p>Pla d'Acció Tutorial · Valors Cívics i Ètics · Medi Natural, Social i Cultural</p></div>
+        <div><span class="label">Competències</span><p>CPSAA1 · CPSAA3 · CPSAA5 (Decret 175/2022)</p></div>
+        <div><span class="label">Sessions</span><p>Majoritàriament de 45 min; algunes de 10 a 30 min</p></div>
+        <div><span class="label">Format</span><p>Web de consulta + fitxes PDF imprimibles amb criteris DUA</p></div>
+        <div><span class="label">Enfocament</span><p>Pedagogia sistèmica, model bioecològic i neuroeducació</p></div>
+        <div><span class="label">Avaluació</span><p>Formativa i qualitativa, sense notes numèriques</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Què inclou el recurs</span>
+        <h2>Tot el que necessites, a punt per imprimir</h2>
+      </div>
+      <div class="counts">
+        <a href="#fonaments"><b>4</b><span>fitxes de fonaments</span><small>Justificació, Decret, actitud docent i base teòrica</small></a>
+        <a href="#mapa"><b>15</b><span>fitxes d'aula</span><small>Guia per al docent + fitxa de l'alumne/a</small></a>
+        <a href="#avaluacio"><b>3</b><span>instruments d'avaluació</span><small>Rúbrica, coavaluació anònima i diari</small></a>
+        <a href="#mapa"><b>1</b><span>mapa d'activitats</span><small>Per triar fitxa segons la necessitat del grup</small></a>
+      </div>
+      <div class="mods" style="margin-top:22px">
+        <a class="mod-card" href="#modul-1" style="--mc:var(--m1);--mt:var(--m1-t)"><span class="k">Mòdul I · identitat i origen · CPSAA1</span><h3>El fil invisible de la meva història</h3><p>El nom, la família i les persones importants per a l'infant, sense esquemes biològics tancats.</p><span class="go">5 fitxes →</span></a>
+        <a class="mod-card" href="#modul-2" style="--mc:var(--m2);--mt:var(--m2-t)"><span class="k">Mòdul II · grup i convivència · CPSAA3</span><h3>Som una Tribu</h3><p>Pertinença real, conflictes, estereotips i relacions: tothom té un lloc legítim a l'aula.</p><span class="go">5 fitxes →</span></a>
+        <a class="mod-card" href="#modul-3" style="--mc:var(--m3);--mt:var(--m3-t)"><span class="k">Mòdul III · error i avaluació · CPSAA5</span><h3>Abraçar l'error</h3><p>L'error i el conflicte com a informació útil, amb autoavaluació i reparació.</p><span class="go">5 fitxes →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="com-es-una-fitxa">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Com és cada fitxa d'aula</span>
+        <h2>Dues pàgines: una per a tu, una per a l'alumnat</h2>
+        <p class="lede">Totes les fitxes segueixen la mateixa estructura, perquè les puguis preparar en pocs minuts.</p>
+      </div>
+      <div class="anat">
+        <div class="sheet">
+          <span class="pg">Pàgina 1 · Guia per al docent</span>
+          <ul>
+            <li><i>◎</i><b>Mirada sistèmica</b><span>El principi que treballa: pertinença, ordre o equilibri.</span></li>
+            <li><i>✓</i><b>Objectiu competencial</b><span>Què ha d'aconseguir l'alumnat, vinculat a la CPSAA.</span></li>
+            <li><i>✎</i><b>Materials</b><span>Què cal preparar abans de la sessió.</span></li>
+            <li><i>1·2·3</i><b>Desenvolupament</b><span>La sessió pas a pas.</span></li>
+            <li><i>?</i><b>Preguntes clau de guiatge</b><span>Frases per acompanyar el diàleg.</span></li>
+            <li><i>◐◑</i><b>Adaptació a Cicle Inicial i Superior</b><span>Com ajustar-la a altres edats.</span></li>
+            <li><i>★</i><b>Orientacions per a la diversitat familiar</b><span>Què tenir en compte amb adopció, acolliment o altres estructures.</span></li>
+            <li><i>DUA</i><b>Nota DUA</b><span>Alternatives de format: dibuix, oral o escrit.</span></li>
+          </ul>
+        </div>
+        <div class="sheet kid">
+          <span class="pg">Pàgina 2 · Fitxa de l'alumne/a</span>
+          <p>Plantilla imprimible per treballar a l'aula: espais per escriure o dibuixar i una frase de tancament.</p>
+          <p class="muted" style="font-size:.9rem">Les fitxes de fonaments i les eines d'avaluació porten, en lloc d'aquesta pàgina, un full de síntesi o de registre per al docent.</p>
+          <a class="btn small ghost" href="materials/modul-1/fitxa-1-1-el-meu-nom.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Veure un exemple: Fitxa 1.1</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="com-comencar">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Com començar</span>
+        <h2>Quatre passos per portar-ho a l'aula</h2>
+      </div>
+      <ol class="steps4">
+        <li><b>Prepara la mirada</b><p>Llegeix la <a href="#f-0-3">Fitxa 0.3</a>, sobre l'actitud del docent sistèmic. Són 10 minuts.</p></li>
+        <li><b>Tria segons el grup</b><p>Fes servir el <a href="#mapa">mapa d'activitats</a> o la <a href="#cerca">cerca per necessitat</a>.</p></li>
+        <li><b>Porta-ho a l'aula</b><p>Imprimeix la guia i la fitxa de l'alumne/a i segueix el desenvolupament pas a pas.</p></li>
+        <li><b>Observa i acompanya</b><p>Registra l'evolució del grup amb les <a href="#avaluacio">eines d'avaluació</a>, sense posar notes.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Per a qui és útil</span>
+        <h2>Pensat per al dia a dia de tutoria i orientació</h2>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <span class="label">Si ets tutor o tutora</span>
+          <ul>
+            <li>Sessions preparades que encaixen en l'hora de tutoria.</li>
+            <li>Preguntes de guiatge per acompanyar el diàleg amb el grup.</li>
+            <li>Una fitxa per a cada alumne/a, amb opció de dibuix, oral o escrit.</li>
+            <li>Pautes per acollir tota la diversitat familiar sense exposar ningú.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <span class="label">Si treballes en orientació o en un EAP</span>
+          <ul>
+            <li>Una rúbrica qualitativa per observar la cohesió del grup (<a href="#eina-a">Eina A</a>).</li>
+            <li>Un mapa de relacions confidencial per detectar possibles exclusions (<a href="#f-2-5">Fitxa 2.5</a>).</li>
+            <li>Un full d'autoavaluació de l'actitud docent per assessorar l'equip (<a href="#f-0-3">Fitxa 0.3</a>).</li>
+            <li>La justificació curricular, a punt per presentar al claustre (<a href="#f-0-2">Fitxa 0.2</a>).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Per on començo?</span>
+        <h2>Tria segons el que passa al teu grup</h2>
+      </div>
+      <ul class="start">
+        <li><a href="#f-2-2"><span>Hi ha un conflicte concret a l'aula o al pati</span><span class="to">Fitxes 2.2 i 3.4 →</span></a></li>
+        <li><a href="#f-1-3"><span>Arriba un infant nou o una estructura familiar diferent</span><span class="to">Fitxa 1.3 →</span></a></li>
+        <li><a href="#f-3-0"><span>Un infant té por de l'error o de l'avaluació</span><span class="to">Fitxes 3.0 i 3.1 →</span></a></li>
+        <li><a href="#f-2-1"><span>Algú fa el que sigui per encaixar al grup</span><span class="to">Fitxa 2.1 →</span></a></li>
+        <li><a href="#cerca"><span>Una altra situació</span><span class="to">Cerca per necessitat →</span></a></li>
+        <li><a href="#experiencies"><span>Vull veure com ho apliquen altres escoles</span><span class="to">Experiències sistèmiques →</span></a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== FONAMENTS =========================== -->
+<div class="view" data-view="fonaments" hidden>
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Bloc introductori · Fitxes 0.1 – 0.4</span>
+        <h2>Fonaments de la guia</h2>
+        <p class="lede">Situar el marc normatiu i la disposició d'escolta activa del docent, i dotar-lo de rigor teòric per a la intervenció.</p>
+      </div>
+      <div class="chips">
+        <a href="#f-0-1">0.1 Justificació</a><a href="#f-0-2">0.2 Decret 175/2022</a><a href="#f-0-3">0.3 Actitud docent</a><a href="#f-0-4">0.4 Base teòrica</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-0-1">
+    <div class="wrap">
+      <div class="fitxa0"><span class="num">Fitxa 0.1</span><h2>Presentació i justificació</h2><p class="muted">Per presentar el producte a l'equip docent o a les famílies.</p><a class="btn small ghost" style="justify-self:start;margin-top:6px" href="materials/fonaments/fitxa-0-1-presentacio-justificacio.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Fitxa PDF</a></div>
+      <p style="max-width:66ch">Arrels per volar és una guia didàctica transversal de mirada sistèmica, en format de caixa d'eines pràctica, transferible i modular. Es fonamenta en la Pedagogia Sistèmica Multidimensional i en el model bioecològic de Bronfenbrenner. Parteix d'una idea central: la seguretat afectiva i el reconeixement incondicional dels propis orígens són la condició prèvia per a qualsevol aprenentatge profund.</p>
+
+      <h3 class="sub-h">Un meta-recurs, no una programació</h3>
+      <div class="compare">
+        <div><span class="label">Programació convencional</span><ul><li>Cronològica i lineal</li><li>Curricularment tancada</li><li>Lligada a una àrea concreta</li><li>Calendari rígid de fites acumulatives</li></ul></div>
+        <div><span class="label" style="color:var(--m1-t)">Arrels per volar</span><ul><li>Recurs transversal interconnectat</li><li>No substitueix la programació: hi afegeix sentit sistèmic</li><li>Nuclis d'activació, no unitats consecutives</li><li>S'usa dins del PAT o de les SA de Medi o de Valors</li></ul></div>
+      </div>
+
+      <h3 class="sub-h">Doble funció</h3>
+      <div class="two">
+        <div class="panel"><span class="label">Pedagògica</span><ul><li>Treballar la identitat, les arrels i els vincles afectius.</li><li>Afavorir l'autoconeixement i la competència emocional.</li><li>Millorar la convivència i el clima d'aula.</li></ul></div>
+        <div class="panel"><span class="label">Docent</span><ul><li>Recursos i eines directament aplicables.</li><li>Orientar l'actitud sistèmica i la mirada reflexiva.</li><li>Criteris clars d'avaluació formadora i qualitativa.</li></ul></div>
+      </div>
+
+      <h3 class="sub-h">Necessitats i beneficis</h3>
+      <div class="two">
+        <div class="panel"><span class="label">Necessitats que cobreix</span><ul><li>Reforçar la cooperació entre escola i família.</li><li>Prevenir el malestar emocional i la desconnexió identitària.</li><li>Donar eines estructurades per a la tutoria.</li><li>Integrar el treball emocional al currículum.</li><li>Incloure tota la diversitat d'estructures familiars.</li></ul></div>
+        <div class="panel"><span class="label">Beneficis esperats</span><ul><li>Més pertinença i cohesió de grup.</li><li>Menys estrès i millor regulació emocional.</li><li>Més seguretat cognitiva per aprendre.</li><li>Comunicació família–centre més confiada.</li></ul></div>
+      </div>
+
+      <h3 class="sub-h">Encaix al centre i formats</h3>
+      <div class="systems">
+        <svg viewBox="0 0 220 220" role="img" aria-label="Tres cercles inclosos: PEC, PAT i programació d'aula">
+          <circle cx="110" cy="110" r="104" fill="var(--m3-soft)" stroke="var(--m3)" stroke-width="1.5"/>
+          <circle cx="110" cy="124" r="74" fill="var(--m1-soft)" stroke="var(--m1)" stroke-width="1.5"/>
+          <circle cx="110" cy="140" r="44" fill="var(--m2-soft)" stroke="var(--m2)" stroke-width="1.5"/>
+          <text x="110" y="32" text-anchor="middle" style="fill:var(--m3-t);font:700 13px var(--body)">PEC</text>
+          <text x="110" y="76" text-anchor="middle" style="fill:var(--m1-t);font:700 13px var(--body)">PAT</text>
+          <text x="110" y="137" text-anchor="middle" style="fill:var(--m2-t);font:700 12px var(--body)">Programació</text>
+          <text x="110" y="152" text-anchor="middle" style="fill:var(--m2-t);font:700 12px var(--body)">d'aula</text>
+        </svg>
+        <ul class="levels">
+          <li><span class="dot" style="background:var(--m3)"></span><div><h4>Projecte Educatiu de Centre</h4><p>Valors d'inclusió, acollida, convivència i atenció a la diversitat.</p></div></li>
+          <li><span class="dot" style="background:var(--m1)"></span><div><h4>Pla d'Acció Tutorial</h4><p>Recurs operatiu per a la tutoria de Cicle Mitjà.</p></div></li>
+          <li><span class="dot" style="background:var(--m2)"></span><div><h4>Programació d'aula</h4><p>Situacions d'aprenentatge modulars en el dia a dia.</p></div></li>
+          <li><span class="dot" style="background:var(--peach)"></span><div><h4>Format híbrid</h4><p>Aquest web com a nucli del recurs, i un dossier de fitxes imprimibles en PDF dissenyades amb criteris DUA.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-0-2">
+    <div class="wrap">
+      <div class="fitxa0"><span class="num">Fitxa 0.2</span><h2>Alineació amb el Decret 175/2022</h2><p class="muted">A quina competència o criteri respon cada mòdul.</p><a class="btn small ghost" style="justify-self:start;margin-top:6px" href="materials/fonaments/fitxa-0-2-decret-175-2022.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Fitxa PDF</a></div>
+      <p style="max-width:66ch;margin-bottom:22px"><b>Objectiu general:</b> proporcionar una caixa d'eines didàctica i sistèmica que afavoreixi la identitat narrativa, el sentit de pertinença i el benestar emocional de l'alumnat, integrant la història familiar a l'aula.</p>
+      <h3 style="margin-bottom:12px">Objectius específics</h3>
+      <ol style="padding-left:1.3em;display:grid;gap:8px;max-width:66ch;margin-bottom:30px">
+        <li>Investigar i valoritzar el propi origen personal i familiar, sense judicis de valor.</li>
+        <li>Desenvolupar l'autoconeixement i l'autoregulació emocional (Immordino-Yang et al., 2018; Siegel i Payne Bryson, 2012).</li>
+        <li>Enfortir el sentit de pertinença amb eines visuals com el genograma adaptat (Parellada, 2020).</li>
+        <li>Fomentar l'empatia, l'escolta activa i la comunicació assertiva (CPSAA).</li>
+        <li>Dotar el professorat d'estratègies que millorin la relació família–escola i evitin conflictes de lleialtat.</li>
+        <li>Facilitar instruments d'avaluació competencial coherents amb la mirada sistèmica.</li>
+      </ol>
+      <h3 style="margin-bottom:12px">Indicadors de la CPSAA en finalitzar la Primària</h3>
+      <div class="quotes">
+        <blockquote><b>CPSAA1 · Mòdul I</b>«És conscient de les pròpies emocions, idees i comportaments personals i empra estratègies per gestionar-los en situacions de tensió o conflicte.»</blockquote>
+        <blockquote><b>CPSAA3 · Mòdul II</b>«Reconeix i respecta les emocions i experiències dels altres, participa activament en el treball en grup […] i dona/fa servir estratègies cooperatives dirigides a la consecució d'objectius compartits.»</blockquote>
+        <blockquote><b>CPSAA5 · Mòdul III i avaluació</b>«Planifica objectius a curt termini, utilitza estratègies d'aprenentatge autoregulat i participa en processos d'auto- i coavaluació, reconeixent les seves limitacions i sabent buscar ajuda en el procés de construcció de coneixement.»</blockquote>
+      </div>
+      <h3 style="margin-bottom:6px">Valors Cívics i Ètics · Competència específica 1</h3>
+      <p class="muted" style="max-width:66ch;margin-bottom:12px">«Identificar aspectes vinculats a la pròpia identitat […] per promoure l'autoconeixement i el desenvolupament de l'autonomia moral.» El Decret situa aquests criteris en el tram de 5è o 6è; aquí s'entenen com l'horitzó d'arribada cap al qual el Cicle Mitjà ja comença a treballar.</p>
+      <div class="quotes">
+        <blockquote><b>Criteri 1.1 · tram 5è–6è</b>«Reconèixer les pròpies capacitats físiques, sensorials i cognitives tenint en compte els punts forts i febles de la pròpia identitat promovent l'autoconeixement.»</blockquote>
+        <blockquote><b>Criteri 1.2 · tram 5è–6è</b>«Identificar trets personals que facilitin el procés de construcció de la pròpia identitat amb responsabilitat i autonomia.»</blockquote>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Element curricular</th><th>Articulació en la guia i les fitxes</th></tr></thead>
+          <tbody>
+            <tr><td>Valors Cívics i Ètics · CE1</td><td><span class="tag t1">Mòdul I</span><br>Biografia personal i familiar. Diversitat de models familiars: monoparentals, homoparentals, reconstituïdes, d'acollida i extenses.</td></tr>
+            <tr><td>CPSAA1</td><td><span class="tag t1">Mòdul I</span><br>Autoconeixement i gestió emocional; arrels i fortaleses per a una imatge positiva de si mateix.</td></tr>
+            <tr><td>CPSAA3</td><td><span class="tag t2">Mòdul II</span><br>Empatia, treball en grup i estratègies cooperatives.</td></tr>
+            <tr><td>CPSAA5</td><td><span class="tag t3">Mòdul III</span><span class="tag t1">Avaluació</span><br>Objectius, aprenentatge autoregulat i auto- i coavaluació.</td></tr>
+            <tr><td>Vectors curriculars</td><td>Benestar emocional, educació inclusiva (DUA), perspectiva de gènere i diversitat familiar.</td></tr>
+            <tr><td>Avaluació</td><td>Global, contínua i formativa (art. 23–24), centrada en el procés, mai en el tipus de família. <a href="#avaluacio">Veure Avaluació</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-0-3">
+    <div class="wrap">
+      <div class="fitxa0"><span class="num">Fitxa 0.3</span><h2>L'actitud del docent sistèmic</h2><p class="muted">Per repassar la pròpia actitud abans de començar.</p><a class="btn small ghost" style="justify-self:start;margin-top:6px" href="materials/fonaments/fitxa-0-3-actitud-docent.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Fitxa PDF</a></div>
+      <div class="rows">
+        <div><b>No-judici</b><p>Totes les famílies tenen lloc a l'aula tal com són.</p></div>
+        <div><b>Assentiment</b><p>Dir «sí» al que és i al que ha estat, com a punt de partida.</p></div>
+        <div><b>Acceptació incondicional</b><p>Reconèixer tots els orígens i estructures familiars.</p></div>
+        <div><b>Comunicació assertiva</b><p>Guions de diàleg clars i respectuosos amb alumnat i famílies.</p></div>
+        <div><b>Neutralitat i lleialtats</b><p>L'infant no ha de triar entre la seva família i l'escola.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="f-0-4">
+    <div class="wrap">
+      <div class="fitxa0"><span class="num">Fitxa 0.4</span><h2>Base teòrica</h2><p class="muted">PSM, Bronfenbrenner i neuroeducació.</p><a class="btn small ghost" style="justify-self:start;margin-top:6px" href="materials/fonaments/fitxa-0-4-base-teorica.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Fitxa PDF</a></div>
+      <div class="two">
+        <div class="panel"><span class="label">Pedagogia Sistèmica Multidimensional</span><p>L'infant com a part d'un sistema familiar i escolar (Hellinger, Franke-Gricksch, Parellada, Traveset).</p></div>
+        <div class="panel"><span class="label">Model bioecològic</span><p>Bronfenbrenner: la guia treballa especialment el mesosistema família–escola.</p></div>
+        <div class="panel"><span class="label">Neuroeducació</span><p>Emoció i cognició són inseparables: la seguretat afectiva allibera disponibilitat per aprendre.</p></div>
+        <div class="panel"><span class="label">Per què a 8–10 anys</span><p>Descentració (Piaget, Selman), temps genealògic (Pozo; Trepat i Comes), identitat narrativa (Bruner, McAdams) i pertinença (Erikson, Bowlby).</p></div>
+      </div>
+      <h3 class="sub-h" id="lectures">Lectures per aprofundir</h3>
+      <div class="two">
+        <div class="panel">
+          <span class="label">Pedagogia sistèmica · obres de referència</span>
+          <ul class="reads">
+            <li><b>La xarxa amorosa per educar</b><span>Parellada, C. i Traveset, M. (2014). <i>Les idees clau de la pedagogia sistèmica multidimensional.</i> Octaedro. En català.</span></li>
+            <li><b>R-Evolució del sistema educatiu</b><span>Traveset, M. i Parellada, C. (2014). <i>La pedagogia sistèmica multidimensional, un paradigma educatiu emergent.</i> Octaedro. En català.</span></li>
+            <li><b>Pensar amb el cor, sentir amb la ment</b><span>Traveset, M. (2014). <i>Recursos didàctics d'educació emocional sistèmica multidimensional.</i> Octaedro. En català.</span></li>
+            <li><b>Órdenes del amor</b><span>Hellinger, B. Herder. Obra de base dels «ordres de l'amor» (pertinença, ordre i equilibri).</span></li>
+            <li><b>¡Eres uno de nosotros!</b><span>Franke-Gricksch, M. (2006). <i>Miradas y soluciones sistémicas para docentes, alumnos y padres.</i> Alma Lepik.</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <span class="label">Documents oficials i d'accés lliure</span>
+          <ul class="reads">
+            <li><a href="https://portaljuridic.gencat.cat/eli/es-ct/d/2022/09/27/175" target="_blank" rel="noopener">Decret 175/2022 ↗</a><span>D'ordenació dels ensenyaments de l'educació bàsica. Portal Jurídic de Catalunya.</span></li>
+            <li><a href="https://repositori.educacio.gencat.cat/handle/20.500.12694/652" target="_blank" rel="noopener">Avaluar és aprendre ↗</a><span>Sanmartí, N. (2020). Departament d'Educació. Descàrrega gratuïta.</span></li>
+            <li><a href="https://www.aspeninstitute.org/publications/the-brain-basis-for-integrated-social-emotional-and-academic-development/" target="_blank" rel="noopener">The Brain Basis for Integrated Social, Emotional, and Academic Development ↗</a><span>Immordino-Yang, M. H., Darling-Hammond, L. i Krone, C. (2018). The Aspen Institute. En anglès, gratuït.</span></li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="sub-h">Algunes referències</h3>
+      <ul class="refs">
+        <li>Bisquerra (2009)</li><li>Bowlby (1988)</li><li>Bronfenbrenner (1979, 1987)</li><li>Bruner (1990, 1997)</li><li>Franke-Gricksch (2006)</li><li>Generalitat de Catalunya (2022). Decret 175/2022</li><li>Hellinger (2001)</li><li>Immordino-Yang et al. (2018)</li><li>McAdams (2001, 2013)</li><li>Parellada (2020)</li><li>Piaget (1972)</li><li>Sanmartí (2020)</li><li>Siegel i Payne Bryson (2012)</li><li>Traveset (2017)</li><li>UNESCO (2012)</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== MAPA =========================== -->
+<div class="view" data-view="mapa" hidden>
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Mapa d'activitats</span>
+        <h2>Els tres mòduls d'un cop d'ull</h2>
+        <p class="lede">Totes les fitxes, la seva durada, el criteri CPSAA que treballen i per a quina situació et poden servir. Toca una fitxa per obrir-la.</p>
+      </div>
+      <div class="map" id="map"></div>
+    </div>
+  </section>
+  <section id="cerca">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Cerca ràpida per necessitat</span>
+        <h2>Si el que tens és…</h2>
+      </div>
+      <div class="search"><input id="q" type="search" placeholder="Escriu una paraula: conflicte, error, família, gènere…" aria-label="Cerca per necessitat"></div>
+      <div class="needs" id="needs"></div>
+      <p class="note">«Aquest mapa no substitueix la lectura de cada fitxa: només t'ajuda a triar per on començar.»</p>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== MÒDULS =========================== -->
+<div class="view" data-view="modul-1" hidden><section><div class="wrap" id="mv-1"></div></section></div>
+<div class="view" data-view="modul-2" hidden><section><div class="wrap" id="mv-2"></div></section></div>
+<div class="view" data-view="modul-3" hidden><section><div class="wrap" id="mv-3"></div></section></div>
+
+<!-- =========================== AVALUACIÓ =========================== -->
+<div class="view" data-view="avaluacio" hidden>
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Bloc 2 · Avaluar des de la mirada sistèmica</span>
+        <h2>Tres mirades sobre el grup, cap nota numèrica</h2>
+        <p class="lede">Eines d'avaluació formativa i competencial: rúbriques d'autoavaluació i coavaluació, pautes d'observació de la cohesió i indicadors de benestar emocional (Decret 175/2022, art. 23–24; Sanmartí, 2020).</p>
+      </div>
+      <div class="dims"><span>Cohesió de grup</span><span>Seguretat emocional</span><span>Respecte a la diversitat</span></div>
+      <div class="three">
+        <article class="tool" id="eina-a">
+          <span class="gaze">Mirada externa</span>
+          <h3>Eina A · Rúbrica qualitativa d'observació del grup</h3>
+          <dl><dt>Qui</dt><dd>El docent</dd><dt>Quan</dt><dd>A l'inici, a mig curs i al final, o després de cada mòdul</dd><dt>Com</dt><dd>Tres nivells en positiu, amb metàfora d'arrel. Registra l'evolució del grup, mai no qualifica cap infant, i pot alimentar l'informe qualitatiu de 5è i 6è.</dd></dl>
+          <a class="btn small ghost" style="justify-self:start" href="materials/avaluacio/eina-a-rubrica-observacio-grup.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Rúbrica (PDF)</a>
+        </article>
+        <article class="tool" id="eina-b">
+          <span class="gaze">Mirada compartida</span>
+          <h3>Eina B · «Com estem, com a grup?»</h3>
+          <dl><dt>Qui</dt><dd>L'alumnat, de manera anònima</dd><dt>Quan</dt><dd>Al tancament de cada mòdul</dd><dt>Com</dt><dd><span class="lights" aria-label="vermell, groc, verd"><i style="background:var(--red)"></i><i style="background:var(--yellow)"></i><i style="background:var(--green)"></i></span>Com se sent el grup, mai com es valora un company. Lectura agregada i conversa oberta.</dd></dl>
+          <a class="btn small ghost" style="justify-self:start" href="materials/avaluacio/eina-b-com-estem-com-a-grup.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>Graella (PDF)</a>
+        </article>
+        <article class="tool">
+          <span class="gaze">Mirada interna</span>
+          <h3>Diari de metacognició</h3>
+          <dl><dt>Qui</dt><dd>Cada infant</dd><dt>Quan</dt><dd>10 minuts setmanals, tot el curs</dd><dt>Com</dt><dd>Entrades breus sobre com s'ha sentit i què ha après. No es corregeix; es comparteix només si l'infant vol.</dd></dl>
+          <a class="btn small ghost" style="justify-self:start" href="#f-3-3">Veure la Fitxa 3.3</a>
+        </article>
+      </div>
+      <p class="callout">L'Eina B fa servir el codi de colors d'<a href="#f-3-2">El semàfor de l'aprenentatge (Fitxa 3.2)</a>, i la seva lectura compartida segueix la línia d'<a href="#f-3-4">El cercle de reparació (Fitxa 3.4)</a>.</p>
+    </div>
+  </section>
+</div>
+
+<!-- =========================== ORIENTACIONS =========================== -->
+<div class="view" data-view="orientacions" hidden>
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Bloc 3 · Orientacions i annexos</span>
+        <h2>Portar-ho a qualsevol aula</h2>
+        <p class="lede">Assegurar la transferibilitat i l'adaptabilitat a diferents contextos educatius.</p>
+      </div>
+      <div class="three">
+        <div class="panel"><span class="label">Cicle Inicial</span><p>Llenguatges visuals, joc simbòlic i expressió plàstica.</p></div>
+        <div class="panel" style="border:2px solid var(--m1)"><span class="label">Cicle Mitjà · aplicació principal</span><p>Comprensió temporal i narrativa autobiogràfica: la proposta completa.</p></div>
+        <div class="panel"><span class="label">Cicle Superior</span><p>Reflexió analítica, consciència crítica i història de vida compartida.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="dua">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Disseny Universal per a l'Aprenentatge</span>
+        <h2>Pensat per a tot l'alumnat</h2>
+      </div>
+      <div class="three">
+        <div class="panel"><span class="label">Representació</span><h4>Diverses maneres de rebre la informació</h4><p>Organitzadors gràfics amb suports visuals d'alta iconicitat.</p></div>
+        <div class="panel"><span class="label">Acció i expressió</span><h4>Diverses maneres d'expressar-se</h4><p>Mai un únic format escrit: també dibuix o relat oral gravat.</p></div>
+        <div class="panel"><span class="label">Compromís</span><h4>Diverses maneres d'implicar-se</h4><p>Ajudes regulables, agrupaments flexibles i autoavaluació visual de l'estat d'ànim.</p></div>
+      </div>
+      <h3 class="sub-h">Com està dissenyat aquest web</h3>
+      <div class="rows">
+        <div><b>Coherència</b><p>Sense elements decoratius que distreguin del contingut.</p></div>
+        <div><b>Senyalització</b><p>Un color per mòdul i icones per a la modalitat de treball.</p></div>
+        <div><b>Usabilitat</b><p>Menú superior, desplegable de mòduls, botons per passar d'un mòdul a l'altre i PDF a un sol clic.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="experiencies">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Experiències sistèmiques</span>
+        <h2>Aprendre d'altres escoles i docents</h2>
+        <p class="lede">Espais on mestres i escoles comparteixen com apliquen la pedagogia sistèmica a l'aula, per inspirar-se i fer xarxa.</p>
+      </div>
+      <div class="two">
+        <a class="panel exp" href="https://sistemicaformacions.cat/experiencies" target="_blank" rel="noopener">
+          <span class="label">Sistemica Formacions</span>
+          <h3>Experiències d'aplicació de la pedagogia sistèmica ↗</h3>
+          <p>Sessions en línia gratuïtes on l'alumnat de la formació en pedagogia sistèmica presenta projectes aplicats a escoles d'infantil, primària i secundària. Hi ha gravacions de les sessions anteriors.</p>
+          <span class="url">sistemicaformacions.cat/experiencies</span>
+        </a>
+        <a class="panel exp" href="https://www.mesistemic.cat/trobades" target="_blank" rel="noopener">
+          <span class="label">MES · Xarxa d'Escoles Sistèmiques de Catalunya</span>
+          <h3>Presentació d'experiències ↗</h3>
+          <p>Trobades per compartir experiències d'aplicació de la pedagogia sistèmica en diferents etapes educatives i enfortir la xarxa de professionals i escoles.</p>
+          <span class="url">mesistemic.cat/trobades</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="materials">
+    <div class="wrap">
+      <div class="shead">
+        <span class="label">Material descarregable i plantilles</span>
+        <h2>Tots els imprimibles</h2>
+      </div>
+      <ul class="dl">
+        <li><span class="t">Mapa d'activitats<small>Els tres mòduls i la cerca per necessitat</small></span><a class="btn small ghost" href="materials/mapa-activitats.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+        <li><span class="t">Eina A · Rúbrica d'observació del grup<small>Avaluació · docent</small></span><a class="btn small ghost" href="materials/avaluacio/eina-a-rubrica-observacio-grup.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+        <li><span class="t">Eina B · «Com estem, com a grup?»<small>Avaluació · alumnat</small></span><a class="btn small ghost" href="materials/avaluacio/eina-b-com-estem-com-a-grup.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+      </ul>
+      <div class="dl-group" style="--mc:var(--peach)">
+        <h3><i></i>Bloc introductori · Fonaments</h3>
+        <ul class="dl">
+          <li><span class="t">0.1 · Presentació i justificació<small>Per al docent</small></span><a class="btn small ghost" href="materials/fonaments/fitxa-0-1-presentacio-justificacio.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+          <li><span class="t">0.2 · Alineació amb el Decret 175/2022<small>Per al docent</small></span><a class="btn small ghost" href="materials/fonaments/fitxa-0-2-decret-175-2022.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+          <li><span class="t">0.3 · L'actitud del docent sistèmic<small>Per al docent</small></span><a class="btn small ghost" href="materials/fonaments/fitxa-0-3-actitud-docent.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+          <li><span class="t">0.4 · Base teòrica<small>Per al docent</small></span><a class="btn small ghost" href="materials/fonaments/fitxa-0-4-base-teorica.pdf" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>PDF</a></li>
+        </ul>
+      </div>
+      <div id="dl-modules"></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Arrels per volar · Banc de fitxes de pedagogia sistèmica · Cicle Mitjà d'Educació Primària</span>
+    <a href="#inici">↑ Tornar a l'inici</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* =========================================================
+     FITXES (dades del Mapa d'activitats)
+     - pdf: ruta de l'arxiu dins la carpeta materials/
+     - tipus: ind = individual · par = en parelles · grp = en grup
+     ========================================================= */
+  const MODULS = [
+    { n:"I", id:"modul-1", c:"m1", tema:"identitat i origen", titol:"El fil invisible de la meva història", curr:"CPSAA1",
+      desc:"Treballa la identitat individual de l'infant des del respecte absolut al seu nucli d'origen. En lloc de l'arbre genealògic biològic clàssic, que pot excloure, fa servir un mapa de vincles obert.",
+      fitxes:[
+        {num:"1.1", titol:"El meu nom", dur:"45 min", tipus:"ind", sit:"Per descobrir el primer vincle simbòlic amb la pròpia història, a partir de l'origen del nom.", pdf:"materials/modul-1/fitxa-1-1-el-meu-nom.pdf"},
+        {num:"1.2", titol:"L'Escut de la meva Família", dur:"3 sessions de 45 min", tipus:"ind", sit:"Per integrar les dues línies familiars (origen i criança) en una síntesi personal pròpia.", pdf:"materials/modul-1/fitxa-1-2-escut-familia.pdf"},
+        {num:"1.3", titol:"El Genograma dels Vincles", dur:"2 sessions de 45 min", tipus:"ind", sit:"Per a un mapa de vincles obert, sense esquema biològic tancat: ideal davant de qualsevol diversitat familiar.", pdf:"materials/modul-1/fitxa-1-3-genograma-vincles.pdf"},
+        {num:"1.4", titol:"La història d'amor dels meus avis o pares", dur:"45 min", tipus:"ind", sit:"Per reconèixer la generació anterior com a font de vida, sense jutjar-ne les circumstàncies.", pdf:"materials/modul-1/fitxa-1-4-historia-amor.pdf"},
+        {num:"1.5", titol:"Carta a qui m'ha cuidat", dur:"45 min", tipus:"ind", sit:"Per posar en paraules un reconeixement cap a qui ha tingut cura de l'infant.", pdf:"materials/modul-1/fitxa-1-5-carta.pdf"}
+      ]},
+    { n:"II", id:"modul-2", c:"m2", tema:"grup i convivència", titol:"Som una Tribu", curr:"CPSAA3",
+      desc:"Dinàmiques d'aula per a la cohesió del grup-classe sota el principi d'ordre i pertinença: tots els alumnes tenen un lloc legítim a l'aula.",
+      fitxes:[
+        {num:"2.1", titol:"Què faig per agradar/pertànyer?", dur:"45 min", tipus:"par", sit:"Quan detectes conductes de «comprar-se» un lloc al grup, per distingir-les de la pertinença real.", pdf:"materials/modul-2/fitxa-2-1-agradar-pertanyer.pdf"},
+        {num:"2.2", titol:"Escenes de conflicte", dur:"50 min", tipus:"grp", sit:"Davant conflictes habituals d'aula o pati: role-play per restablir l'equilibri, no per buscar culpables.", pdf:"materials/modul-2/fitxa-2-2-escenes-conflicte.pdf"},
+        {num:"2.3", titol:"Casos pràctics", dur:"45 min", tipus:"grp", sit:"Per entrenar el grup a mirar el sistema sencer abans de jutjar una conducta aïllada.", pdf:"materials/modul-2/fitxa-2-3-casos-practics.pdf",
+          videos:[
+            {t:"Cuerdas", d:"Pedro Solís García, 2013 · ~11 min · canal oficial a YouTube", url:"https://www.youtube.com/c/cuerdascortometrajeoficial"},
+            {t:"Ian", d:"Fundación Ian, 2018 · ~9 min · sense diàlegs · web oficial", url:"https://fundacionian.org.ar/corto.html"},
+            {t:"El regalo (The Present)", d:"Jacob Frey, 2014 · ~4 min · gairebé sense diàlegs · Vimeo de l'autor", url:"https://vimeo.com/152985022"}]},
+        {num:"2.4", titol:"Ets noi si… / Ets noia si…", dur:"45 min", extra:"Persp. gènere", tipus:"grp", sit:"Quan calgui qüestionar estereotips de gènere que condicionen la pertinença al grup.", pdf:"materials/modul-2/fitxa-2-4-estereotips.pdf"},
+        {num:"2.5", titol:"El mapa de relacions", dur:"45 min + retorn individual", tipus:"grp", sit:"Per detectar punts de cohesió i possibles exclusions al grup-classe.", pdf:"materials/modul-2/fitxa-2-5-mapa-relacions.pdf"}
+      ]},
+    { n:"III", id:"modul-3", c:"m3", tema:"error i avaluació", titol:"Abraçar l'error", curr:"CPSAA5",
+      desc:"Estratègies per reduir l'estrès d'avaluació i donar a l'error, i més àmpliament al conflicte, un valor funcional dins de l'aprenentatge.",
+      fitxes:[
+        {num:"3.0", titol:"Les tres arrels que ens ajuden", dur:"30 min", tipus:"grp", sit:"Per obrir el mòdul: la base conceptual (pertinença, ordre, equilibri) abans de treballar l'error.", pdf:"materials/modul-3/fitxa-3-0-tres-arrels.pdf"},
+        {num:"3.1", titol:"El monstre (o l'amic) de l'error", dur:"45 min", tipus:"ind", sit:"Per reformular la por a l'error com a informació útil, no com un «deute» a amagar.", pdf:"materials/modul-3/fitxa-3-1-monstre-error.pdf"},
+        {num:"3.2", titol:"El semàfor de l'aprenentatge", dur:"15–20 min · ús recurrent", tipus:"ind", sit:"Autoavaluació ràpida i honesta d'«on soc ara» en una tasca, tantes vegades com calgui.", pdf:"materials/modul-3/fitxa-3-2-semafor.pdf"},
+        {num:"3.3", titol:"El diari de descobriments", dur:"10 min setmanals", tipus:"ind", sit:"Ús transversal a tot el curs perquè l'infant sigui protagonista actiu del seu aprenentatge.", pdf:"materials/modul-3/fitxa-3-3-diari-descobriments.pdf"},
+        {num:"3.4", titol:"El cercle de reparació", dur:"20–30 min · ús puntual", tipus:"grp", sit:"Ús puntual quan un conflicte o error ha afectat el grup i cal reparar, sense buscar culpable.", pdf:"materials/modul-3/fitxa-3-4-cercle-reparacio.pdf"}
+      ]}
+  ];
+
+  /* Cerca ràpida per necessitat (pàgina 2 del Mapa d'activitats) */
+  const NEEDS = [
+    {g:"Identitat i origen (Mòdul I)", rows:[
+      [["1.1"], "Vols que l'alumnat descobreixi i valori l'origen del seu propi nom."],
+      [["1.3"], "Un infant nou s'incorpora al grup, o té una estructura familiar diferent (adopció, acolliment, família monoparental, reconstituïda…) i cal un mapa de vincles que no exigeixi un esquema biològic tancat."],
+      [["1.4"], "Vols treballar la història familiar anterior a l'infant, sense jutjar-ne les circumstàncies."],
+      [["1.5"], "Vols que l'infant posi en paraules un reconeixement cap a qui n'ha tingut cura."]]},
+    {g:"Grup i convivència (Mòdul II)", rows:[
+      [["2.1"], "Detectes algú que «es ven» o fa coses per encaixar al grup, en lloc de sentir-s'hi pertanyent de debò."],
+      [["2.2","3.4"], "Hi ha un conflicte concret entre infants a l'aula o al pati que cal treballar o reparar."],
+      [["2.3"], "Vols que el grup analitzi situacions socials mirant el sistema sencer, abans de jutjar una conducta aïllada."],
+      [["2.4"], "Detectes estereotips de gènere que condicionen qui pot fer o ser què dins del grup."],
+      [["2.5"], "Vols detectar punts de cohesió o possibles exclusions al grup-classe."]]},
+    {g:"Error i avaluació (Mòdul III)", rows:[
+      [["3.0","3.1"], "Un infant té ansietat o por davant l'error o l'avaluació."],
+      [["3.2","B"], "Vols una eina ràpida i recurrent d'autoavaluació i de percepció del grup."],
+      [["3.3"], "Vols un seguiment transversal i continuat dels aprenentatges de l'infant al llarg de tot el curs."]]},
+    {g:"Avaluació competencial i formació del docent", rows:[
+      [["A"], "Vols un registre qualitatiu, propi, de com evoluciona la cohesió i la seguretat emocional del grup-classe."],
+      [["B"], "Vols saber, de manera anònima, com se sent el grup respecte a la cohesió, la seguretat i la diversitat."],
+      [["0.1"], "Has de presentar el producte a l'equip docent o a les famílies i vols saber-ne la justificació."],
+      [["0.2"], "Necessites saber a quina competència o criteri del Decret 175/2022 respon cada mòdul."],
+      [["0.3"], "Vols repassar la teva pròpia actitud —no-judici, neutralitat— abans de començar."],
+      [["0.4"], "Vols conèixer la base teòrica (PSM, Bronfenbrenner, neuroeducació) que sosté el disseny."]]}
+  ];
+
+
+  /* Dades de la guia per al docent de cada PDF: principi sistèmic, objectiu i materials */
+  const EXTRA = {
+    "1.1":["Pertinença","Investigar i explicar l'origen del propi nom com a primera peça de la identitat narrativa.","Fitxa «El meu nom» i llapis de colors."],
+    "1.2":["Ordre","Representar simbòlicament valors i objectes significatius de les pròpies línies familiars i integrar-los en una síntesi personal.","Tres plantilles d'escut, colors i retoladors; retalls de revistes (opcional)."],
+    "1.3":["Pertinença i ordre","Representar el propi sistema de vincles significatius amb un mapa obert, que substitueix l'arbre genealògic tradicional.","Plantilla de cercles concèntrics, gomets o pictogrames neutres i un gomet «estrella»."],
+    "1.4":["Ordre transgeneracional","Recollir i explicar, en la mesura que sigui possible, un fragment de la història que va precedir el seu naixement.","Fitxa «La meva història abans de mi»."],
+    "1.5":["Equilibri (donar i rebre)","Expressar per escrit o oralment un reconeixement personal cap a qui n'ha tingut cura.","Paper de carta i sobres decorables."],
+    "2.1":["Pertinença","Identificar comportaments orientats a agradar o encaixar i diferenciar-los d'una pertinença genuïna al grup.","Fitxa de dues columnes."],
+    "2.2":["Equilibri","Representar i analitzar escenes de conflicte habituals a l'aula o al pati i assajar respostes alternatives.","Targetes d'escenes de conflicte i espai per moure's."],
+    "2.3":["Mirar amb bons ulls","Analitzar situacions socials i proposar respostes cooperatives.","Quatre targetes de casos amb vinyetes; un curtmetratge (opcional)."],
+    "2.4":["Pertinença sense condicions","Identificar estereotips de gènere de l'entorn proper i qüestionar-ne la rigidesa, sense estigmatitzar cap identitat.","Targetes de frases i pissarra o paper gran per al cartell col·lectiu."],
+    "2.5":["Ordre","Representar la xarxa de relacions del grup-classe i identificar-hi punts de cohesió i possibles exclusions.","Qüestionari confidencial, graella de tabulació per al docent i un cabdell de fil."],
+    "3.0":["Pertinença, ordre i equilibri","Reconèixer, amb paraules senzilles, tres idees clau per mirar qualsevol conflicte sense por ni vergonya.","Fitxa «Les meves tres arrels»; pòster de les tres arrels (opcional)."],
+    "3.1":["Equilibri","Identificar la reacció emocional pròpia davant l'error i reformular-la com a informació útil.","Fitxa «El meu monstre de l'error» i colors."],
+    "3.2":["Ordre","Autoavaluar el propi grau de domini d'una tasca amb un codi visual senzill.","Targetes o gomets de colors i graella de seguiment."],
+    "3.3":["Pertinença al propi procés","Portar un registre reflexiu i continuat dels aprenentatges i errors com a font de millora.","Quadern o full de registre setmanal."],
+    "3.4":["Equilibri","Aplicar una estratègia cooperativa de reparació quan un error o un desacord ha afectat el grup.","Cap material específic; espai per fer rotllana."]
+  };
+  const TIPUS = {ind:"Individual", par:"En parelles", grp:"En grup"};
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const fid = num => "f-" + num.replace(".", "-");
+  const NEED_OF = {};
+  NEEDS.forEach(g => g.rows.forEach(([refs, txt]) => refs.forEach(r => { (NEED_OF[r] = NEED_OF[r] || []).push(txt); })));
+  const pdfBtn = (href, text, ghost) =>
+    `<a class="btn small${ghost ? " ghost" : ""}" href="${esc(href)}" target="_blank" rel="noopener"><svg><use href="#i-pdf"/></svg>${text}</a>`;
+  const vars = m => `--mc:var(--${m.c});--mt:var(--${m.c}-t);--ms:var(--${m.c}-soft)`;
+
+  /* ---- Mapa (3 columnes) ---- */
+  document.getElementById("map").innerHTML = MODULS.map(m => `
+    <div class="map-col" style="${vars(m)}">
+      <a class="hd" href="#${m.id}"><b>Mòdul ${m.n}</b><small>${esc(m.titol)}</small></a>
+      ${m.fitxes.map(f => `
+        <a class="mc" href="#${fid(f.num)}">
+          <span class="no">Fitxa ${f.num}</span>
+          <b>${esc(f.titol)}</b>
+          <span class="d">${esc(f.dur)} · <em>${m.curr}</em>${f.extra ? " · " + esc(f.extra) : ""}</span>
+          <i>${esc(f.sit)}</i>
+        </a>`).join("")}
+    </div>`).join("");
+
+  /* ---- Cerca per necessitat ---- */
+  const refLink = r => {
+    if (r === "A") return `<a href="#eina-a">Eina A</a>`;
+    if (r === "B") return `<a href="#eina-b">Eina B</a>`;
+    return `<a href="#${fid(r)}">Fitxa ${r}</a>`;
+  };
+  const needsEl = document.getElementById("needs");
+  needsEl.innerHTML = NEEDS.map(g => `
+    <div class="grp"><div class="g">${esc(g.g)}</div>
+      ${g.rows.map(([refs, txt]) => `<div class="r"><span>${refs.map(refLink).join(" + ")}</span><p>${esc(txt)}</p></div>`).join("")}
+    </div>`).join("") + `<p class="none" hidden>Cap situació coincideix amb aquesta paraula. Prova'n una altra o revisa el mapa.</p>`;
+  const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  document.getElementById("q").addEventListener("input", e => {
+    const q = norm(e.target.value.trim());
+    let total = 0;
+    needsEl.querySelectorAll(".grp").forEach(grp => {
+      let any = false;
+      grp.querySelectorAll(".r").forEach(r => { const ok = !q || norm(r.textContent).includes(q); r.hidden = !ok; if (ok){ any = true; total++; } });
+      grp.hidden = !any;
+    });
+    needsEl.querySelector(".none").hidden = total > 0;
+  });
+
+  /* ---- Pàgina de cada mòdul ---- */
+  MODULS.forEach((m, i) => {
+    const prev = MODULS[i - 1], next = MODULS[i + 1];
+    document.getElementById("mv-" + (i + 1)).innerHTML = `
+      <div class="mhead" style="${vars(m)}">
+        <span class="n">${m.n}</span>
+        <div>
+          <span class="k">Mòdul ${m.n} · ${m.tema} · ${m.curr}</span>
+          <h2>${esc(m.titol)}</h2>
+          <p>${esc(m.desc)}</p>
+        </div>
+      </div>
+      <div class="legend"><span><svg><use href="#i-ind"/></svg>Individual</span><span><svg><use href="#i-par"/></svg>En parelles</span><span><svg><use href="#i-grp"/></svg>En grup / tribu</span></div>
+      <ul class="fitxes" style="${vars(m)}">
+        ${m.fitxes.map(f => `
+          <li class="fx" id="${fid(f.num)}">
+            <div class="main">
+              <span class="no">Fitxa ${f.num}</span>
+              <h3>${esc(f.titol)}</h3>
+              <div class="meta"><span>${esc(f.dur)}</span><b>${m.curr}</b>${f.extra ? `<span>${esc(f.extra)}</span>` : ""}<span class="wt"><svg aria-hidden="true"><use href="#i-${f.tipus}"/></svg>${TIPUS[f.tipus]}</span></div>
+              <p class="sit">${esc(f.sit)}</p>
+              ${EXTRA[f.num] ? `<dl><dt>Principi</dt><dd>${esc(EXTRA[f.num][0])}</dd><dt>Objectiu</dt><dd>${esc(EXTRA[f.num][1])}</dd><dt>Materials</dt><dd>${esc(EXTRA[f.num][2])}</dd></dl>` : ""}
+              ${NEED_OF[f.num] ? `<p class="need"><b>Fes-la servir si…</b> ${esc(NEED_OF[f.num].join(" "))}</p>` : ""}
+              ${f.videos ? `<div class="videos"><b>Curtmetratges opcionals</b> (gratuïts, versió oficial):<ul>${f.videos.map(v => `<li><a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.t)} ↗</a> <span>${esc(v.d)}</span></li>`).join("")}</ul></div>` : ""}
+            </div>
+            <div class="side">${pdfBtn(f.pdf, "Fitxa PDF", true)}<p class="incl">Guia + fitxa de l'alumne/a</p></div>
+          </li>`).join("")}
+      </ul>
+      <div class="pager">
+        ${prev ? `<a class="btn ghost" href="#${prev.id}">← Mòdul ${prev.n}</a>` : `<a class="btn ghost" href="#mapa">← Mapa d'activitats</a>`}
+        ${next ? `<a class="btn ghost" href="#${next.id}">Mòdul ${next.n} →</a>` : `<a class="btn ghost" href="#avaluacio">Avaluació →</a>`}
+      </div>`;
+  });
+
+  /* ---- Descàrregues per mòdul ---- */
+  document.getElementById("dl-modules").innerHTML = MODULS.map(m => `
+    <div class="dl-group" style="${vars(m)}">
+      <h3><i></i>Mòdul ${m.n} · ${esc(m.titol)}</h3>
+      <ul class="dl">
+        ${m.fitxes.map(f => `<li><span class="t">${f.num} · ${esc(f.titol)}<small>${esc(f.dur)} · ${TIPUS[f.tipus]}</small></span>${pdfBtn(f.pdf, "PDF", true)}</li>`).join("")}
+      </ul>
+    </div>`).join("");
+
+  /* =========================================================
+     NAVEGACIÓ ENTRE PÀGINES
+     Cada «pàgina» és un bloc .view; un enllaç #id mostra la
+     pàgina corresponent i, si cal, hi baixa fins a l'element.
+     ========================================================= */
+  const views = [...document.querySelectorAll(".view")];
+  const nav = document.getElementById("nav"), menuBtn = document.getElementById("menuBtn");
+  const dd = document.getElementById("dd"), ddBtn = document.getElementById("ddBtn");
+  const setDD = open => { dd.classList.toggle("open", open); ddBtn.setAttribute("aria-expanded", String(open)); };
+  const setMenu = open => { nav.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); };
+
+  function go(id, remember){
+    let view = views.find(v => v.dataset.view === id);
+    let target = null;
+    if (!view){
+      target = document.getElementById(id);
+      view = target ? target.closest(".view") : null;
+    }
+    if (!view){ view = views[0]; target = null; id = "inici"; }
+    views.forEach(v => v.hidden = v !== view);
+    const name = view.dataset.view;
+    const group = /^modul-|^mapa$/.test(name) ? "moduls" : name;
+    document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("on", a.dataset.nav === group));
+    let cur = null;
+    document.querySelectorAll("#ddMenu a").forEach(a => {
+      const on = a.getAttribute("href") === "#" + name;
+      a.classList.toggle("on", on);
+      if (on){ a.setAttribute("aria-current", "page"); cur = a; } else a.removeAttribute("aria-current");
+    });
+    const ddCur = document.getElementById("ddCur");
+    ddBtn.style.cssText = cur ? cur.getAttribute("style") : "";
+    ddCur.hidden = !cur;
+    ddCur.textContent = !cur ? "" : (name === "mapa" ? "Mapa" : name.replace("modul-", "").replace("1","I").replace("2","II").replace("3","III"));
+    setDD(false); setMenu(false);
+    const head = document.querySelector(".top").offsetHeight;
+    if (target){
+      window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - head - 16, behavior:"instant"});
+      if (target.classList.contains("fx")){ target.classList.remove("flash"); void target.offsetWidth; target.classList.add("flash"); }
+    } else {
+      window.scrollTo({top:0, behavior:"instant"});
+    }
+    if (remember){ try { history.replaceState(null, "", "#" + id); } catch(e){} }
+  }
+
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a){
+      const id = a.getAttribute("href").slice(1);
+      if (!id) return;
+      e.preventDefault();
+      go(id, true);
+      return;
+    }
+    if (!e.target.closest("#dd")) setDD(false);
+  });
+  ddBtn.addEventListener("click", () => setDD(!dd.classList.contains("open")));
+  menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  document.addEventListener("keydown", e => { if (e.key === "Escape"){ setDD(false); setMenu(false); } });
+
+  let start = ""; try { start = decodeURIComponent(location.hash.slice(1)); } catch(e){}
+  go(start || "inici", false);
+})();
+</script>
+</body>
+</html>
