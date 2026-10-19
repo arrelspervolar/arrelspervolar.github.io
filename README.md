@@ -44,3 +44,9 @@ Obre `index.html` amb el navegador. No cal instal·lar res.
 ## Marc de referència
 
 Pedagogia Sistèmica Multidimensional, model bioecològic de Bronfenbrenner i neuroeducació. Alineat amb el Decret 175/2022 d'ordenació dels ensenyaments de l'educació bàsica (Generalitat de Catalunya).
+
+## Llicència
+
+© 2026 Elisabet Trilla Bestregui. «Arrels per volar» (textos, fitxes i disseny) es publica sota llicència [Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca): es pot compartir i adaptar citant-ne l'autoria, sense ús comercial i amb la mateixa llicència.
+
+La il·lustració de la portada (`img/logo-arrels-per-volar.webp`) s'ha creat amb intel·ligència artificial i no està inclosa en aquesta llicència. Les cites del Decret 175/2022 i els curtmetratges enllaçats pertanyen als seus titulars.
