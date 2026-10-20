@@ -326,6 +326,16 @@ td:first-child{font-weight:700;width:32%}
 .panel.exp:hover{box-shadow:0 8px 24px rgba(60,40,20,.08)}
 .panel.exp h3{color:var(--m2-t)}
 .panel.exp .url{font-size:.82rem;color:var(--m1-t);font-weight:700}
+.sabers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.saber{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.saber .label{color:var(--m1-t)}
+.saber p{font-size:.93rem;color:var(--muted)}
+.saber p b{color:var(--ink)}
+.saber .where{display:flex;flex-wrap:wrap;gap:4px}
+.saber .note2{font-size:.84rem;font-style:italic}
+@media (max-width:700px){ .sabers{grid-template-columns:1fr} }
+.mhead .msab{font-size:.9rem;color:var(--muted);margin-top:6px}
+.mhead .msab b{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer a{text-decoration:none;font-weight:700;color:var(--ink)}
@@ -622,6 +632,24 @@ footer .lic a{text-decoration:underline;font-weight:700}
         <blockquote><b>Criteri 9.1 · transversal (Fitxes 2.2 i 3.4)</b>«Participar en la comunitat escolar i la vida social realitzant activitats, assumint responsabilitats i establint acords de forma dialogada i democràtica, emprant un llenguatge inclusiu i no violent.»</blockquote>
         <blockquote><b>Criteri 9.2 · transversal</b>«Contribuir al benestar individual i col·lectiu de la societat […] valorant la diversitat i mostrant empatia i respecte per les cultures.»</blockquote>
       </div>
+      <h3 style="margin-bottom:6px">Sabers de Medi mobilitzats</h3>
+      <p class="muted" style="max-width:66ch;margin-bottom:12px">L'àrea de Medi estructura els seus sabers en tres blocs oficials: cultura científica, tecnologia i digitalització, i societats i territoris. «Arrels per volar» només mobilitza sabers del primer i del tercer; el bloc de tecnologia i digitalització no hi té cap vinculació (Decret 175/2022, Annex 2).</p>
+      <div class="sabers">
+        <div class="saber">
+          <span class="label">Cultura científica → «La vida al nostre planeta»</span>
+          <p>Font del saber mobilitzat pel criteri 4.3 (CE4): «identificació i ús d'hàbits saludables relacionats amb el benestar emocional i social: estratègies d'identificació i gestió de les pròpies emocions per respectar i acceptar la diversitat present a l'aula i a la societat».</p>
+          <div class="where"><span class="tag t1">Tot el Mòdul I</span><span class="tag t2">Mòdul II · fitxes 2.1, 2.2, 2.3 i 2.5</span></div>
+          <p class="note2">La Fitxa 2.4 no el cita, perquè el seu focus és específicament l'estereotip de gènere.</p>
+        </div>
+        <div class="saber">
+          <span class="label">Societats i territoris → «Reptes del món actual» i «Alfabetització cívica»</span>
+          <p><b>Criteri 8.1</b> (CE8): «promoure actituds d'equitat, igualtat de gènere i conductes no sexistes».</p>
+          <div class="where"><span class="tag t2">Tot el Mòdul II</span></div>
+          <p style="margin-top:8px"><b>Criteri 9.1</b> (CE9): «participar en la comunitat escolar i la vida social […] establint acords de forma dialogada i democràtica». Vinculació puntual i transversal, només a les dues fitxes d'ancoratge de la ciutadania democràtica.</p>
+          <div class="where"><span class="tag t2">Fitxa 2.2 · Escenes de conflicte</span><span class="tag t3">Fitxa 3.4 · El cercle de reparació</span></div>
+          <p class="note2">La Fitxa 3.4 és l'únic punt del Mòdul III amb vinculació de Medi: la resta del mòdul es vincula només a la CPSAA, que no té bloc de sabers propi al Decret.</p>
+        </div>
+      </div>
       <h3 style="margin-bottom:6px">Valors Cívics i Ètics · horitzó d'arribada</h3>
       <p class="muted" style="max-width:66ch;margin-bottom:12px">Les competències específiques 1 (identitat i autonomia moral) i 4 (autoestima i gestió emocional) tenen els criteris situats al tram de 5è o 6è. No es vinculen directament als mòduls de 3r i 4t: s'entenen com l'horitzó cap al qual el Cicle Mitjà ja comença a treballar, i es reserven a les pautes de Cicle Superior.</p>
       <div class="quotes">
@@ -869,6 +897,7 @@ footer .lic a{text-decoration:underline;font-weight:700}
      ========================================================= */
   const MODULS = [
     { n:"I", id:"modul-1", c:"m1", tema:"identitat i origen", titol:"El fil invisible de la meva història", curr:"CPSAA1 · Medi 4.3",
+      sabers:"Cultura científica → «La vida al nostre planeta»: hàbits saludables relacionats amb el benestar emocional i social (criteri 4.3, totes les fitxes).",
       desc:"Treballa la identitat individual de l'infant des del respecte absolut al seu nucli d'origen. En lloc de l'arbre genealògic biològic clàssic, que pot excloure, fa servir un mapa de vincles obert.",
       fitxes:[
         {num:"1.1", crit:"CPSAA1 · Medi CE4.3", titol:"El meu nom", dur:"45 min", tipus:"ind", sit:"Per descobrir el primer vincle simbòlic amb la pròpia història, a partir de l'origen del nom.", pdf:"materials/modul-1/Fitxa_1.1_El_meu_nom.pdf"},
@@ -878,6 +907,7 @@ footer .lic a{text-decoration:underline;font-weight:700}
         {num:"1.5", crit:"CPSAA1 · Medi CE4.3", titol:"Carta a qui m'ha cuidat", dur:"45 min", tipus:"ind", sit:"Per posar en paraules un reconeixement cap a qui ha tingut cura de l'infant.", pdf:"materials/modul-1/Fitxa_1.5_Carta_a_qui_ha_cuidat.pdf"}
       ]},
     { n:"II", id:"modul-2", c:"m2", tema:"grup i convivència", titol:"Som una Tribu", curr:"CPSAA3 · Medi 4.3 i 8.1",
+      sabers:"Cultura científica → «La vida al nostre planeta» (criteri 4.3; fitxes 2.1, 2.2, 2.3 i 2.5) i Societats i territoris → «Reptes del món actual» i «Alfabetització cívica»: equitat i igualtat de gènere (criteri 8.1, tot el mòdul) i participació i acords dialogats (criteri 9.1, Fitxa 2.2).",
       desc:"Dinàmiques d'aula per a la cohesió del grup-classe sota el principi d'ordre i pertinença: tots els alumnes tenen un lloc legítim a l'aula.",
       fitxes:[
         {num:"2.1", crit:"CPSAA3 · Medi CE4.3 i CE8.1", titol:"Què faig per agradar/pertànyer?", dur:"45 min", tipus:"par", sit:"Quan detectes conductes de «comprar-se» un lloc al grup, per distingir-les de la pertinença real.", pdf:"materials/modul-2/Fitxa_2.1_Que_faig_per_pertanyer.pdf"},
@@ -891,6 +921,7 @@ footer .lic a{text-decoration:underline;font-weight:700}
         {num:"2.5", crit:"CPSAA3 · Medi CE4.3 i CE8.1", titol:"El mapa de relacions", dur:"45 min + retorn individual", tipus:"grp", sit:"Per detectar punts de cohesió i possibles exclusions al grup-classe.", pdf:"materials/modul-2/Fitxa_2.5_El_mapa_de_relacions.pdf"}
       ]},
     { n:"III", id:"modul-3", c:"m3", tema:"error i avaluació", titol:"Abraçar l'error", curr:"CPSAA4 i CPSAA5 (3.4: CPSAA1 i CPSAA4)",
+      sabers:"Només la Fitxa 3.4 té vinculació de Medi: Societats i territoris → «Reptes del món actual» i «Alfabetització cívica»: participació i acords dialogats (criteri 9.1). La resta del mòdul es vincula només a la CPSAA, que no té bloc de sabers propi al Decret.",
       desc:"Estratègies per reduir l'estrès d'avaluació i donar a l'error, i més àmpliament al conflicte, un valor funcional dins de l'aprenentatge.",
       fitxes:[
         {num:"3.0", crit:"CPSAA4 i CPSAA5", titol:"Les tres arrels que ens ajuden", dur:"30 min", tipus:"grp", sit:"Per obrir el mòdul: la base conceptual (pertinença, ordre, equilibri) abans de treballar l'error.", pdf:"materials/modul-3/Fitxa_3.0_Les_tres_arrels.pdf"},
@@ -1001,6 +1032,7 @@ footer .lic a{text-decoration:underline;font-weight:700}
           <span class="k">Mòdul ${m.n} · ${m.tema} · ${m.curr}</span>
           <h2>${esc(m.titol)}</h2>
           <p>${esc(m.desc)}</p>
+          ${m.sabers ? `<p class="msab"><b>Sabers de Medi:</b> ${esc(m.sabers)}</p>` : ""}
         </div>
       </div>
       <div class="legend"><span><svg><use href="#i-ind"/></svg>Individual</span><span><svg><use href="#i-par"/></svg>En parelles</span><span><svg><use href="#i-grp"/></svg>En grup / tribu</span></div>
